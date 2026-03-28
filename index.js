@@ -452,7 +452,7 @@ function createBot() {
   try {
     // FIX: use version:false to auto-detect server version so the bot can join any server.
     // If the user explicitly sets a version in settings.json it is still respected.
-    const botVersion = config.server.version && config.server.version.trim() !== '' ? config.server.version : false;
+    const botVersion = config.server.version && config.server.version.trim() !== '' ? config.server.version : "1.21.11";
     bot = mineflayer.createBot({
       username: config['bot-account'].username,
       password: config['bot-account'].password || undefined,
